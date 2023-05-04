@@ -115,7 +115,7 @@
   </script>
 
 <script>
-    var contenidoTablaResultado = document.querySelector("#resultados");
+    const contenidoTablaResultado = document.querySelector("#resultados");
 
     function cargarDatos(){
 //"id":"174","nombre":"Progrmacion JR webgh","descripcion":"Para nuevos estudiantes","tiempo":"8"
@@ -124,7 +124,7 @@
         .then((datosrespuesta) => {
           //console.log('datosrespuesta',datosrespuesta.data)
             settable(datosrespuesta.data)
-        } )
+        })
         .catch(console.log)
     }
 
