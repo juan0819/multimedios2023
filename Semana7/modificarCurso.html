@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Insertar</title>
+  <title>ModificarCurso</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -63,26 +63,32 @@
       <main>
         <form id="formulario">
             <div class="mb-3">
+                <label for="" class="form-label">Id</label>
+                <input type="text"
+                  class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Ingresa el nombre del curso">
+                <small id="helpId" class="form-text text-muted">ID</small>
+              </div>
+            <div class="mb-3">
               <label for="" class="form-label">Nombre</label>
               <input type="text"
-                class="form-control" name="nombre" id="nombre"  placeholder="Ingresa el nombre del curso">
-              <small id="helpId" class="form-text text-muted">Help text</small>
+                class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingresa el nombre del curso">
+              <small id="helpId" class="form-text text-muted">Nombre</small>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Descripcion</label>
                 <input type="text"
-                  class="form-control" name="descripcion" id="descripcion"  placeholder="Ingresa la descripcion del curso">
-                <small id="helpId" class="form-text text-muted">Help text</small>
+                  class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Ingresa la descripcion del curso">
+                <small id="helpId" class="form-text text-muted">Descripcion</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Tiempo</label>
                 <input type="text"
-                  class="form-control" name="tiempo" id="tiempo"  placeholder="Ingresa el tiempo del curso">
-                <small id="helpId" class="form-text text-muted">Help text</small>
+                  class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Ingresa el tiempo del curso">
+                <small id="helpId" class="form-text text-muted">Tiempo</small>
               </div>
               <div class="mb-3">
                 <button type="reset" class="btn btn-danger">Limpiar</button>
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-primary">Modificar</button>
               </div>
         </form>
         
@@ -110,15 +116,21 @@
         e.preventDefault(); // para frenar y que no recargue
         const datosEnviar = { 
           
-            nombre:document.getElementById('nombre').value,
-            descripcion:document.getElementById('descripcion').value,
-            tiempo:document.getElementById('tiempo').value,
+            // id: parseInt(document.getElementById('id').value),
+            // nombre:document.getElementById('nombre').value,
+            // descripcion:document.getElementById('descripcion').value,
+            // tiempo:document.getElementById('tiempo').value,
+            // usuario:'Juan'
+            id: 169,
+            nombre:'Redes',
+            descripcion:'Prueba modificar',
+            tiempo:'222',
             usuario:'Juan'
         }
 
-        fetch("https://paginas-web-cr.com/ApiPHP/apis/InsertarCursos.php",
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/ActualizarCursos.php",
         {
-            method: 'POST',
+            method: 'PUT',
             body:JSON.stringify(datosEnviar)
         }
         ) 
