@@ -116,21 +116,16 @@
         e.preventDefault(); // para frenar y que no recargue
         const datosEnviar = { 
           
-            // id: parseInt(document.getElementById('id').value),
-            // nombre:document.getElementById('nombre').value,
-            // descripcion:document.getElementById('descripcion').value,
-            // tiempo:document.getElementById('tiempo').value,
-            // usuario:'Juan'
-            id: 169,
-            nombre:'Redes',
-            descripcion:'Prueba modificar',
-            tiempo:'222',
+            id: parseInt(document.getElementById('id').value),
+            nombre:document.getElementById('nombre').value,
+            descripcion:document.getElementById('descripcion').value,
+            tiempo:document.getElementById('tiempo').value,
             usuario:'Juan'
         }
 
         fetch("https://paginas-web-cr.com/ApiPHP/apis/ActualizarCursos.php",
         {
-            method: 'PUT',
+            method:'PATCH',
             body:JSON.stringify(datosEnviar)
         }
         ) 
