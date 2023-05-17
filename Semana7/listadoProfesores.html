@@ -312,19 +312,19 @@
 
     function editar(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, idCarreras, usuario, nacionalidad){
       myModal.show();
-document.getElementById('cedula').value = cedula,
-document.getElementById('correo').value = correoelectronico, 
-document.getElementById('telefono').value = telefono, 
-document.getElementById('telefonoCelular').value = telefonocelular, 
-document.getElementById('fecha').value =fechanacimiento, 
-document.getElementById('sexo').value =sexo, 
-document.getElementById('direccion').value=direccion,
-document.getElementById('nombre').value=nombre, 
-document.getElementById('apellidopaterno').value=apellidopaterno, 
-document.getElementById('apellidomaterno').value=apellidomaterno, 
-document.getElementById('idCarreras').value=idCarreras, 
-document.getElementById('usuario').value=usuario,
-document.getElementById('nacionalidad').value=nacionalidad 
+      document.getElementById('cedula').value = cedula,
+      document.getElementById('correo').value = correoelectronico, 
+      document.getElementById('telefono').value = telefono, 
+      document.getElementById('telefonoCelular').value = telefonocelular, 
+      document.getElementById('fecha').value = fechanacimiento, 
+      document.getElementById('sexo').value =sexo, 
+      document.getElementById('direccion').value = direccion,
+      document.getElementById('nombre').value = nombre, 
+      document.getElementById('apellidopaterno').value = apellidopaterno, 
+      document.getElementById('apellidomaterno').value = apellidomaterno, 
+      document.getElementById('idCarreras').value = idCarreras, 
+      document.getElementById('usuario').value = usuario,
+      document.getElementById('nacionalidad').value = nacionalidad 
 
 
     }
@@ -334,7 +334,6 @@ document.getElementById('nacionalidad').value=nacionalidad
     var datosenviar = {
             id: id
         }
-        // console.log(datosenviar);
         fetch("https://paginas-web-cr.com/ApiPHP/apis/BorrarProfesores.php",
         {
             method:"POST",
