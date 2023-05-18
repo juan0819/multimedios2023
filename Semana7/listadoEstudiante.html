@@ -70,38 +70,136 @@
             table-borderless
             table-primary
             align-middle">
-                <thead class="table-light">
-                    <caption>Listar Curso</caption>
-                    <tr>
-                        <th>Id</th>
-                        <th>Cedula</th>
-                        <th>Correo Electronico</th>
-                        <th>Telefono</th>
-                        <th>Telefono Celular</th>
-                        <th>Fecha de Nacimiento</th>
-                        <th>Sexo</th>
-                        <th>Direccion</th>
-                        <th>Nombre</th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
-                        <th>Nacionalidad</th>
-                        <th>idCarreras</th>
-                        <th>usuario</th>
-                    </tr>
+        <thead class="table-light">
+                <caption>Table Name</caption>
+                <tr>
+                    <th>id</th>
+                    <th>Cedula</th>
+                    <th>Correo Electronico</th>
+                    <th>Telefono</th>
+                    <th>Telefono Celular</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Sexo</th>
+                    <th>Direccion</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>idCarreras</th>
+                    <th>usuario</th>
+                    <th>Nacionalidad</th>
+                    <th>Acciones</th>
+                </tr>
                     </thead>
                     <tbody class="table-group-divider" id="resultados">
-
-                      
+                        La funcion llena la tabla                                          
                     </tbody>
                     <tfoot>
-                        
+                                    
                     </tfoot>
-            </table>
-        </div>
+            </table>            
+        </div>  
       </main>
       <footer>
         <!-- place footer here -->
       </footer>
+      <!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Modificar Estudiante</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formulario">
+            <div class="mb-3">
+              <input type="hidden" id="id" name="id">
+              <label for="" class="form-label">cedula</label>
+              <input type="text"
+                class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Cedula del profesor">
+              <small id="helpId" class="form-text text-muted">Ingresa el nombre del curso</small>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">correo</label>
+                <input type="text"
+                  class="form-control" name="correo" id="correo"  placeholder="Ingresa le correo">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">telefono</label>
+                <input type="text"
+                  class="form-control" name="telefono" id="telefono"  placeholder="Ingresa el telefono">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">telefono Celular</label>
+                <input type="text"
+                  class="form-control" name="telefonoCelular" id="telefonoCelular"  placeholder="Ingresa el telefono Celular">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Fecha Nacimiento</label>
+                <input type="text"
+                  class="form-control" name="fechanacimiento" id="fechanacimiento"  placeholder="Ingresa el fecha nacimiento">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Sexo</label>
+                <input type="text"
+                  class="form-control" name="sexo" id="sexo"  placeholder="Ingresa el sexo">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Direccion</label>
+                <input type="text"
+                  class="form-control" name="direccion" id="direccion"  placeholder="Ingresa la direccion">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Nombre</label>
+                <input type="text"
+                  class="form-control" name="nombre" id="nombre"  placeholder="Ingresa el nombre">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Apellido paterno</label>
+                <input type="text"
+                  class="form-control" name="apellidopaterno" id="apellidopaterno"  placeholder="Ingresa el apellidopaterno">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Apellido materno</label>
+                <input type="text"
+                  class="form-control" name="apellidomaterno" id="apellidomaterno"  placeholder="Ingresa el apellidomaterno">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Nacionalidad</label>
+                <input type="text"
+                  class="form-control" name="nacionalidad" id="nacionalidad"  placeholder="Ingresa la nacionalidad">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>  
+              <div class="mb-3">
+                <label for="" class="form-label">Id Carrera</label>
+                <input type="text"
+                  class="form-control" name="idCarreras" id="idCarreras"  placeholder="Ingresa el id de la Carrera">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>  
+              <div class="mb-3">
+                <button type="reset" class="btn btn-danger">Reset</button>
+                <button type="submit" class="btn btn-primary">Crear</button>
+  
+              </div>                         
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -113,7 +211,57 @@
   </script>
 
 <script>
-    var contenidoTablaResultado = document.querySelector("#resultados");
+   let contenidoTablaResultado = document.querySelector('#resultados');
+    const myModal = new bootstrap.Modal(document.getElementById('modalId'));
+    let formulario = document.getElementById('formulario');
+
+    formulario.addEventListener('submit', function(e) {
+        e.preventDefault();
+      alert('salvando');
+       let id = document.getElementById('id').value;
+       let cedula = document.getElementById('cedula').value;
+       let correo = document.getElementById('correo').value;
+       let telefono = document.getElementById('telefono').value;
+       let telefonoCelular =document.getElementById('telefonoCelular').value;
+       let fecha = document.getElementById('fechanacimiento').value;
+       let sexo = document.getElementById('sexo').value;
+       let direccion = document.getElementById('direccion').value;
+       let nombre = document.getElementById('nombre').value;
+       let apellidoPaterno = document.getElementById('apellidopaterno').value;
+       let apellidoMaterno = document.getElementById('apellidomaterno').value;
+       let nacionalidad = document.getElementById('nacionalidad').value;
+       let idCarreras = document.getElementById('idCarreras').value;
+
+         datosenviar = {
+            id: id,
+            cedula: cedula,
+            correo:correo,
+            telefono:telefono,
+            telefonoCelular:telefonoCelular,
+            fechanacimiento:fechanacimiento,
+            sexo:sexo,
+            direccion:direccion,
+            nombre:nombre,
+            apellidoPaterno:apellidoPaterno,
+            apellidoMaterno:apellidoMaterno,
+            nacionalidad:nacionalidad,
+            idCarreras:idCarreras,
+            usuario:'profesor Mario'
+            
+        }
+        // console.log(datosenviar);
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/ActualizarEstudiantes.php",
+        {
+            method:"POST",
+            body:JSON.stringify(datosenviar)
+        })//url de peticion de datos
+        .then(respuesta => respuesta.json())//recibe los datos en formato json
+        .then((datosrepuesta) => {    
+            window.location = 'listadoEstudiante.html'        
+             console.log('Datos',datosrepuesta)//Muestra el resultado de la peticion
+        })
+        .catch(console.log)//muestra errores
+    });
 
     function cargarDatos(){
 //"id":"174","nombre":"Progrmacion JR webgh","descripcion":"Para nuevos estudiantes","tiempo":"8"
@@ -147,15 +295,51 @@
                             <td>${valor.nacionalidad}</td>
                             <td>${valor.idCarreras}</td>
                             <td>${valor.usuario}</td>
+                            <td>
+                              <a name="" id="" class="btn btn-danger" onclick="eliminar('${valor.id}')" role="button">Borrar</a>
+                              ||
+                              <a name="" id="" class="btn btn-primary" onclick="editar('${valor.id}', '${valor.cedula}', '${valor.correoelectronico}','${valor.telefono}','${valor.telefonocelular}','${valor.fechanacimiento}','${valor.sexo}','${valor.direccion}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}','${valor.nacionalidad}','${valor.idCarreras}')" role="button">Editar</a>
+                            </td>
                         </tr>`;
         }
     }
 
+    function editar(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno,nacionalidad, idCarreras){
+      myModal.show();
+      document.getElementById('cedula').value = cedula,
+      document.getElementById('correo').value = correoelectronico, 
+      document.getElementById('telefono').value = telefono, 
+      document.getElementById('telefonoCelular').value = telefonocelular, 
+      document.getElementById('fechanacimiento').value = fechanacimiento, 
+      document.getElementById('sexo').value =sexo, 
+      document.getElementById('direccion').value = direccion,
+      document.getElementById('nombre').value = nombre, 
+      document.getElementById('apellidopaterno').value = apellidopaterno, 
+      document.getElementById('apellidomaterno').value = apellidomaterno,
+      document.getElementById('nacionalidad').value = nacionalidad,
+      document.getElementById('idCarreras').value = idCarreras 
 
+
+    }
+
+    function eliminar(id){
+      alert('eliminar'+id);
+    var datosenviar = {
+            id: id
+        }
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/BorrarEstudiantes.php",
+        {
+            method:"POST",
+            body:JSON.stringify(datosenviar)
+        })//url de peticion de datos
+        .then(respuesta => respuesta.json())//recibe los datos en formato json
+        .then((datosrepuesta) => {    
+            alert(datosrepuesta.data)     
+            window.location = 'listadoEstudiante.html'        
+        })
+        .catch(console.log)//muestra errores
+  }
     cargarDatos();
-    // {"code":200,
-    // "message":"Cursos Lista",
-    // "data":[{"id":"174","nombre":"Progrmacion JR webgh","descripcion":"Para nuevos estudiantes","tiempo":"8"},
   </script>
 </body>
 
