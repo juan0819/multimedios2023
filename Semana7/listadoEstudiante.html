@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Estudiantes</title>
+  <title>Listar Datos</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,193 +14,178 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+<div class="container-fluid">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="listadoEstudiante.html">Estudiantes</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                aria-expanded="false" aria-label="Toggle navigation"></button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="listadoProfesores.html" aria-current="page">Profesores <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="listarcurso.html" aria-current="page">Cursos <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="listadoGrupos.html" aria-current="page">Grupos <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="listadoUsuarios.html" aria-current="page">Usuarios <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="listadoEstudianteGrupo.html" aria-current="page">EstudiantesGrupo <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="listadoProfesorGrupo.html" aria-current="page">ProfesorGrupo <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="insertarEstudiante.html" aria-current="page">Insertar <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="modificar.html" aria-current="page">Actualizar <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="consultarId.html" aria-current="page">ConsultarId <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Borrar.html" aria-current="page">Borrar <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="funciones.html" aria-current="page">Funciones <span class="visually-hidden">(current)</span></a>
-                    </li>
-                </ul>
-                <form class="d-flex my-2 my-lg-0">
-                    <input class="form-control me-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="listadoEstudiante.html">Estudiantes</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="listadoProfesores.html" aria-current="page">Profesores <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="listarcurso.html" aria-current="page">Cursos <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="listadoGrupos.html" aria-current="page">Grupos <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="listadoEstudianteGrupo.html" aria-current="page">EstudiantesGrupo <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="listadoProfesorGrupo.html" aria-current="page">ProfesorGrupo <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="insertarEstudiante.html" aria-current="page">Insertar <span class="visually-hidden">(current)</span></a>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+                <input class="form-control me-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
       </header>
       <main>
+        
         <div class="table-responsive">
             <table class="table table-striped
             table-hover	
             table-borderless
             table-primary
             align-middle">
-        <thead class="table-light">
-                <caption>Table Name</caption>
-                <tr>
-                    <th>id</th>
-                    <th>Cedula</th>
-                    <th>Correo Electronico</th>
-                    <th>Telefono</th>
-                    <th>Telefono Celular</th>
-                    <th>Fecha de Nacimiento</th>
-                    <th>Sexo</th>
-                    <th>Direccion</th>
-                    <th>Nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
-                    <th>idCarreras</th>
-                    <th>usuario</th>
-                    <th>Nacionalidad</th>
-                    <th>Acciones</th>
-                </tr>
+                <thead class="table-light">
+                    <caption>Table Name</caption>
+                    <tr>
+                      <th>id</th>
+                      <th>Cedula</th>
+                      <th>Correo Electronico</th>
+                      <th>Telefono</th>
+                      <th>Telefono Celular</th>
+                      <th>Fecha de Nacimiento</th>
+                      <th>Sexo</th>
+                      <th>Direccion</th>
+                      <th>Nombre</th>
+                      <th>Apellido Paterno</th>
+                      <th>Apellido Materno</th>
+                      <th>Nacionalidad</th>
+                      <th>idCarreras</th>
+                      <th>usuario</th>
+                      <th>Acciones</th>
+                    </tr>
                     </thead>
                     <tbody class="table-group-divider" id="resultados">
-                        La funcion llena la tabla                                          
+                            La funcion llena la tabla                                          
                     </tbody>
                     <tfoot>
-                                    
+                        
                     </tfoot>
             </table>            
-        </div>  
+        </div>        
       </main>
       <footer>
         <!-- place footer here -->
       </footer>
-      <!-- Modal Body -->
+<!-- Modal Body -->
 <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
 <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitleId">Modificar Estudiante</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="formulario">
-            <div class="mb-3">
-              <input type="hidden" id="id" name="id">
-              <label for="" class="form-label">cedula</label>
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formulario">
+          <div class="mb-3">
+            <input type="hidden" id="id" name="id">
+            <label for="" class="form-label">Cedula</label>
+            <input type="text"
+              class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Nombre del curso">
+            <small id="helpId" class="form-text text-muted">Ingresa la cedula</small>
+          </div>
+          <div class="mb-3">
+              <label for="" class="form-label">Correo Electronico</label>
               <input type="text"
-                class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Cedula del profesor">
-              <small id="helpId" class="form-text text-muted">Ingresa el nombre del curso</small>
+                class="form-control" name="correoelectronico" id="correoelectronico" aria-describedby="helpId" placeholder="Descripcion del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el correo</small>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">correo</label>
-                <input type="text"
-                  class="form-control" name="correo" id="correo"  placeholder="Ingresa le correo">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">telefono</label>
-                <input type="text"
-                  class="form-control" name="telefono" id="telefono"  placeholder="Ingresa el telefono">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">telefono Celular</label>
-                <input type="text"
-                  class="form-control" name="telefonoCelular" id="telefonoCelular"  placeholder="Ingresa el telefono Celular">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Fecha Nacimiento</label>
-                <input type="text"
-                  class="form-control" name="fechanacimiento" id="fechanacimiento"  placeholder="Ingresa el fecha nacimiento">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Sexo</label>
-                <input type="text"
-                  class="form-control" name="sexo" id="sexo"  placeholder="Ingresa el sexo">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Direccion</label>
-                <input type="text"
-                  class="form-control" name="direccion" id="direccion"  placeholder="Ingresa la direccion">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Nombre</label>
-                <input type="text"
-                  class="form-control" name="nombre" id="nombre"  placeholder="Ingresa el nombre">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Apellido paterno</label>
-                <input type="text"
-                  class="form-control" name="apellidopaterno" id="apellidopaterno"  placeholder="Ingresa el apellidopaterno">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Apellido materno</label>
-                <input type="text"
-                  class="form-control" name="apellidomaterno" id="apellidomaterno"  placeholder="Ingresa el apellidomaterno">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Nacionalidad</label>
-                <input type="text"
-                  class="form-control" name="nacionalidad" id="nacionalidad"  placeholder="Ingresa la nacionalidad">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>  
-              <div class="mb-3">
-                <label for="" class="form-label">Id Carrera</label>
-                <input type="text"
-                  class="form-control" name="idCarreras" id="idCarreras"  placeholder="Ingresa el id de la Carrera">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-              </div>  
-              <div class="mb-3">
-                <button type="reset" class="btn btn-danger">Reset</button>
-                <button type="submit" class="btn btn-primary">Crear</button>
-  
-              </div>                         
-        </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-  
-        </div>
+              <label for="" class="form-label">Telefono</label>
+              <input type="text"
+                class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el telefono</small>
+            </div>  
+            <div class="mb-3">
+              <label for="" class="form-label">Telefono celular</label>
+              <input type="text"
+                class="form-control" name="telefonocelular" id="telefonocelular" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el Telefono celular</small>
+            </div> 
+            <div class="mb-3">
+              <label for="" class="form-label">Fecha nacimiento</label>
+              <input type="text"
+                class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa la fecha nacimiento</small>
+            </div> 
+            <div class="mb-3">
+              <label for="" class="form-label">Sexo</label>
+              <input type="text"
+                class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el sexo</small>
+            </div> 
+            <div class="mb-3">
+              <label for="" class="form-label">Direccion</label>
+              <input type="text"
+                class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa la direccion</small>
+            </div> 
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre</label>
+              <input type="text"
+                class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el nombre</small>
+            </div> 
+            <div class="mb-3">
+              <label for="" class="form-label">Apellido paterno</label>
+              <input type="text"
+                class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el apellido paterno</small>
+            </div> 
+            <div class="mb-3">
+              <label for="" class="form-label">Apellido materno</label>
+              <input type="text"
+                class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el apellido materno</small>
+            </div>   
+            <div class="mb-3">
+              <label for="" class="form-label">Nacionalidad</label>
+              <input type="text"
+                class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa la nacionalidad</small>
+            </div> 
+            <div class="mb-3">
+              <label for="" class="form-label">idCarreras</label>
+              <input type="text"
+                class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el id carrera</small>
+            </div>      
+            <div class="mb-3">
+              <button type="reset" class="btn btn-danger">Reset</button>
+              <button type="submit" class="btn btn-primary">Crear</button>
+
+            </div>                         
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
       </div>
     </div>
   </div>
-  </div>
+</div>
+</div>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -210,44 +195,44 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
 
-<script>
-   let contenidoTablaResultado = document.querySelector('#resultados');
+  <script>
+    //Declaracion de variables u objetos
+    var contenidoTablaResultado = document.querySelector('#resultados');
     const myModal = new bootstrap.Modal(document.getElementById('modalId'));
-    let formulario = document.getElementById('formulario');
+    var formulario = document.getElementById('formulario');
 
     formulario.addEventListener('submit', function(e) {
         e.preventDefault();
       alert('salvando');
-       let id = document.getElementById('id').value;
-       let cedula = document.getElementById('cedula').value;
-       let correo = document.getElementById('correo').value;
-       let telefono = document.getElementById('telefono').value;
-       let telefonoCelular =document.getElementById('telefonoCelular').value;
-       let fecha = document.getElementById('fechanacimiento').value;
-       let sexo = document.getElementById('sexo').value;
-       let direccion = document.getElementById('direccion').value;
-       let nombre = document.getElementById('nombre').value;
-       let apellidoPaterno = document.getElementById('apellidopaterno').value;
-       let apellidoMaterno = document.getElementById('apellidomaterno').value;
-       let nacionalidad = document.getElementById('nacionalidad').value;
-       let idCarreras = document.getElementById('idCarreras').value;
+       var id = document.getElementById('id').value; 
+       var cedula = document.getElementById('cedula').value; 
+       var correoelectronico = document.getElementById('correoelectronico').value; 
+       var telefono = document.getElementById('telefono').value; 
+       var telefonocelular = document.getElementById('telefonocelular').value; 
+       var fechanacimiento = document.getElementById('fechanacimiento').value; 
+       var sexo = document.getElementById('sexo').value; 
+       var direccion = document.getElementById('direccion').value; 
+       var nombre = document.getElementById('nombre').value; 
+       var apellidopaterno = document.getElementById('apellidopaterno').value; 
+       var apellidomaterno = document.getElementById('apellidomaterno').value; 
+       var nacionalidad = document.getElementById('nacionalidad').value; 
+       var idCarreras = document.getElementById('idCarreras').value;
 
-         datosenviar = {
+        var datosenviar = {
             id: id,
-            cedula: cedula,
-            correo:correo,
+            cedula:cedula,
+            correoelectronico:correoelectronico,
             telefono:telefono,
-            telefonoCelular:telefonoCelular,
+            telefonocelular:telefonocelular,
             fechanacimiento:fechanacimiento,
             sexo:sexo,
             direccion:direccion,
             nombre:nombre,
-            apellidoPaterno:apellidoPaterno,
-            apellidoMaterno:apellidoMaterno,
+            apellidopaterno:apellidopaterno,
+            apellidomaterno:apellidomaterno,
             nacionalidad:nacionalidad,
             idCarreras:idCarreras,
-            usuario:'profesor Mario'
-            
+            usuario:'JAJAJA' 
         }
         // console.log(datosenviar);
         fetch("https://paginas-web-cr.com/ApiPHP/apis/ActualizarEstudiantes.php",
@@ -263,24 +248,22 @@
         .catch(console.log)//muestra errores
     });
 
+    //[{"id":"377","nombre":"hola leo","descripcion":"sdsd","tiempo":"asasa"},
     function cargarDatos(){
-//"id":"174","nombre":"Progrmacion JR webgh","descripcion":"Para nuevos estudiantes","tiempo":"8"
-        fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaEstudiantes.php")//la url de peticion 
-        .then(respuesta => respuesta.json())//recibe los datos en json
-        .then((datosrespuesta) => {
-          //console.log('datosrespuesta',datosrespuesta.data)
-            settable(datosrespuesta.data)
-        } )
-        .catch(console.log)
+        //alert('Cargue datos');
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaEstudiantes.php")//url de peticion de datos
+        .then(respuesta => respuesta.json())//recibe los datos en formato json
+       .then((datosrepuesta) => {
+            steTabla(datosrepuesta.data)//lo envio para la funcion para darle tratamiento
+       // console.log('Datos',datosrepuesta.data)//Muestra el resultado de la peticion
+       })
+       .catch(console.log)//muestra errores
     }
 
-    function settable(data){
-        console.log('data',data);
-       
-        for (const valor of data) {
-            console.log('valor: ',valor);
-            contenidoTablaResultado.innerHTML += 
-                    `<tr class="table-primary" >
+    function steTabla(datos){
+        for (const valor of datos) {
+            contenidoTablaResultado.innerHTML += `
+                        <tr class="table-primary" >
                             <td scope="row">${valor.id}</td>
                             <td>${valor.cedula}</td>
                             <td>${valor.correoelectronico}</td>
@@ -295,38 +278,41 @@
                             <td>${valor.nacionalidad}</td>
                             <td>${valor.idCarreras}</td>
                             <td>${valor.usuario}</td>
+                      
                             <td>
                               <a name="" id="" class="btn btn-danger" onclick="eliminar('${valor.id}')" role="button">Borrar</a>
                               ||
-                              <a name="" id="" class="btn btn-primary" onclick="editar('${valor.id}', '${valor.cedula}', '${valor.correoelectronico}','${valor.telefono}','${valor.telefonocelular}','${valor.fechanacimiento}','${valor.sexo}','${valor.direccion}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}','${valor.nacionalidad}','${valor.idCarreras}')" role="button">Editar</a>
+                              <a name="" id="" class="btn btn-primary" onclick="editar('${valor.id}', '${valor.cedula}', '${valor.correoelectronico}', '${valor.telefono}','${valor.telefonocelular}','${valor.fechanacimiento}','${valor.sexo}','${valor.direccion}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}','${valor.nacionalidad}','${valor.idCarreras}')" role="button">Editar</a>
                             </td>
-                        </tr>`;
+                        </tr>`; 
         }
     }
 
-    function editar(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno,nacionalidad, idCarreras){
+    function editar(id,cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno,nacionalidad,idCarreras){
       myModal.show();
-      document.getElementById('cedula').value = cedula,
-      document.getElementById('correo').value = correoelectronico, 
-      document.getElementById('telefono').value = telefono, 
-      document.getElementById('telefonoCelular').value = telefonocelular, 
-      document.getElementById('fechanacimiento').value = fechanacimiento, 
-      document.getElementById('sexo').value =sexo, 
-      document.getElementById('direccion').value = direccion,
-      document.getElementById('nombre').value = nombre, 
-      document.getElementById('apellidopaterno').value = apellidopaterno, 
-      document.getElementById('apellidomaterno').value = apellidomaterno,
-      document.getElementById('nacionalidad').value = nacionalidad,
-      document.getElementById('idCarreras').value = idCarreras 
-
+      document.getElementById('nombre').value = nombre;
+      document.getElementById('cedula').value = cedula;
+      document.getElementById('correoelectronico').value = correoelectronico;
+      document.getElementById('telefono').value = telefono;
+      document.getElementById('telefonocelular').value = telefonocelular;
+      document.getElementById('fechanacimiento').value = fechanacimiento;
+      document.getElementById('sexo').value = sexo;
+      document.getElementById('direccion').value = direccion;
+      document.getElementById('apellidopaterno').value = apellidopaterno;
+      document.getElementById('apellidomaterno').value = apellidomaterno;
+      document.getElementById('nacionalidad').value = nacionalidad;
+      document.getElementById('idCarreras').value = idCarreras;
+      document.getElementById('id').value = id;
 
     }
 
+    
     function eliminar(id){
       alert('eliminar'+id);
     var datosenviar = {
             id: id
         }
+        // console.log(datosenviar);
         fetch("https://paginas-web-cr.com/ApiPHP/apis/BorrarEstudiantes.php",
         {
             method:"POST",
@@ -338,8 +324,15 @@
             window.location = 'listadoEstudiante.html'        
         })
         .catch(console.log)//muestra errores
+
+
+
   }
+
     cargarDatos();
+
+
+
   </script>
 </body>
 
