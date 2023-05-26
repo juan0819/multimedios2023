@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Listar Datos</title>
+  <title>Profesores</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,21 +10,20 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    <style>
+      @import url(estilos.css);
+  </style>
 </head>
 
 <body>
 <div class="container-fluid">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="listadoProfesores.html">Profesores</a>
+        <a class="navbar-brand" href="Home.html">Home</a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="listadoEstudiante.html" aria-current="page">Estudiantes <span class="visually-hidden">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="listarcurso.html" aria-current="page">Cursos <span class="visually-hidden">(current)</span></a>
                 </li>
@@ -32,13 +31,10 @@
                     <a class="nav-link active" href="listadoGrupos.html" aria-current="page">Grupos <span class="visually-hidden">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="listadoEstudianteGrupo.html" aria-current="page">EstudiantesGrupo <span class="visually-hidden">(current)</span></a>
+                    <a class="nav-link active" href="listadoEstudiante.html" aria-current="page">Estudiantes <span class="visually-hidden">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="listadoProfesorGrupo.html" aria-current="page">ProfesorGrupo <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="insertarEstudiante.html" aria-current="page">Insertar <span class="visually-hidden">(current)</span></a>
+                    <a class="nav-link active" href="insertarProfesores.html" aria-current="page">Insertar <span class="visually-hidden">(current)</span></a>
             </ul>
             <form class="d-flex my-2 my-lg-0">
                 <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -48,35 +44,35 @@
     </nav>
       </header>
       <main>
-        
+        <h1>Profesores</h1>
         <div class="table-responsive">
             <table class="table table-striped
             table-hover	
             table-borderless
-            table-primary
+            table-dark table-bordered border-dark
             align-middle">
                 <thead class="table-light">
-                    <caption>Table Name</caption>
+                    <caption>Profesores</caption>
                     <tr>
-                      <th>id</th>
-                      <th>Cedula</th>
+                      <th class="acomodar">id</th>
+                      <th class="acomodar">Cedula</th>
                       <th>Correo Electronico</th>
-                      <th>Telefono</th>
-                      <th>Telefono Celular</th>
+                      <th class="acomodar">Telefono</th>
+                      <th class="acomodar">Telefono Celular</th>
                       <th>Fecha de Nacimiento</th>
-                      <th>Sexo</th>
-                      <th>Direccion</th>
-                      <th>Nombre</th>
-                      <th>Apellido Paterno</th>
-                      <th>Apellido Materno</th>
-                      <th>Nacionalidad</th>
-                      <th>idCarreras</th>
-                      <th>usuario</th>
-                      <th>Acciones</th>
+                      <th class="acomodar">Sexo</th>
+                      <th class="acomodar">Direccion</th>
+                      <th class="acomodar">Nombre</th>
+                      <th class="acomodar">Apellido Paterno</th>
+                      <th class="acomodar">Apellido Materno</th>
+                      <th class="acomodar">Nacionalidad</th>
+                      <th class="acomodar">idCarreras</th>
+                      <th class="acomodar">usuario</th>
+                      <th >Acciones</th>
                     </tr>
                     </thead>
                     <tbody class="table-group-divider" id="resultados">
-                            La funcion llena la tabla                                          
+                                                                    
                     </tbody>
                     <tfoot>
                         
@@ -263,7 +259,7 @@
     function steTabla(datos){
         for (const valor of datos) {
             contenidoTablaResultado.innerHTML += `
-                        <tr class="table-primary" >
+                        <tr class="table-info table-bordered border-dark" >
                             <td scope="row">${valor.id}</td>
                             <td>${valor.cedula}</td>
                             <td>${valor.correoelectronico}</td>

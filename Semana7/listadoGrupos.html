@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Listar Datos</title>
+  <title>Grupos</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,35 +17,23 @@
 <div class="container-fluid">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="listadoEstudiante.html">Estudiantes</a>
+        <a class="navbar-brand" href="Home.html">Home</a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="listadoProfesores.html" aria-current="page">Profesores <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link active" href="listarcurso.html" aria-current="page">Cursos <span class="visually-hidden">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="listadoGrupos.html" aria-current="page">Grupos <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="listadoUsuarios.html" aria-current="page">Usuarios <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="listadoEstudianteGrupo.html" aria-current="page">EstudiantesGrupo <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="listadoProfesorGrupo.html" aria-current="page">ProfesorGrupo <span class="visually-hidden">(current)</span></a>
-                </li>
+                  <a class="nav-link active" href="listadoEstudiante.html" aria-current="page">Estudiantes <span class="visually-hidden">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="listadoProfesores.html" aria-current="page">Profesores <span class="visually-hidden">(current)</span></a>
+            </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="insertarGrupos.html" aria-current="page">Insertar <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="consultarId.html" aria-current="page">ConsultarId <span class="visually-hidden">(current)</span></a>
-                </li>
+                </li> 
             </ul>
             <form class="d-flex my-2 my-lg-0">
                 <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -55,12 +43,12 @@
     </nav>
       </header>
       <main>
-        
+        <h1>Grupos</h1>
         <div class="table-responsive">
             <table class="table table-striped
             table-hover	
             table-borderless
-            table-primary
+            table-dark table table-bordered border-dark
             align-middle">
                 <thead class="table-light">
                     <caption>Grupos</caption>
@@ -71,7 +59,7 @@
                     </tr>
                     </thead>
                     <tbody class="table-group-divider" id="resultados">
-                            La funcion llena la tabla                                          
+                                                                   
                     </tbody>
                     <tfoot>
                         
@@ -167,7 +155,7 @@
     function steTabla(datos){
         for (const valor of datos) {
             contenidoTablaResultado.innerHTML += `
-                        <tr class="table-primary" >
+                        <tr class="table-info table table-bordered border-dark" >
                             <td scope="row">${valor.id}</td>
                             <td>${valor.nombre}</td>
                            
