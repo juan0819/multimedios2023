@@ -70,6 +70,23 @@
       <footer>
         <!-- place footer here -->
       </footer>
+      <!-- Modal de Bootstrap -->
+<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alertModalLabel">Mensaje de Exito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Todo salio bien!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="redireccionar()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Modal Body -->
 <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
 <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
@@ -85,7 +102,7 @@
             <input type="hidden" id="id" name="id">
             <label for="" class="form-label">Nombre</label>
             <input type="text"
-              class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre del curso">
+              class="form-control" name="nombre" required id="nombre" aria-describedby="helpId" placeholder="Nombre del curso">
             <small id="helpId" class="form-text text-muted">Ingresa el nombre del curso</small>
           </div>      
             <div class="mb-3">
@@ -120,7 +137,8 @@
 
     formulario.addEventListener('submit', function(e) {
         e.preventDefault();
-      alert('salvando');
+      myModal.hide();
+      mostrarAlerta();
        var id = document.getElementById('id').value;
        var nombre = document.getElementById('nombre').value;
 
@@ -128,7 +146,6 @@
             id: id,
             nombre:nombre,
         }
-        // console.log(datosenviar);
         fetch("https://paginas-web-cr.com/ApiPHP/apis/ActualizarGrupo.php",
         {
             method:"POST",
@@ -140,10 +157,7 @@
         })
         .catch(console.log)//muestra errores
     });
-
-    //[{"id":"377","nombre":"hola leo","descripcion":"sdsd","tiempo":"asasa"},
     function cargarDatos(){
-        //alert('Cargue datos');
         fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaGrupo.php")//url de peticion de datos
         .then(respuesta => respuesta.json())//recibe los datos en formato json
        .then((datosrepuesta) => {
@@ -177,7 +191,6 @@
 
     
     function eliminar(id){
-      alert('eliminar'+id);
     var datosenviar = {
             id: id
         }
@@ -189,15 +202,21 @@
         })//url de peticion de datos
         .then(respuesta => respuesta.json())//recibe los datos en formato json
         .then((datosrepuesta) => {    
-            alert(datosrepuesta.data)     
-             console.log('Datos',datosrepuesta)//Muestra el resultado de la peticion
+           mostrarAlerta();     
         })
         .catch(console.log)//muestra errores
 
 
 
   }
-
+  function mostrarAlerta() {
+    var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+    alertModal.show();
+    
+  }
+  function redireccionar(){
+    window.location = 'listadoGrupos.html';
+  }
     cargarDatos();
 
 

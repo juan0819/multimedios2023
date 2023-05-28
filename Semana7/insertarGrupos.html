@@ -36,10 +36,9 @@
       <main>
         <form id="formulario">
             <div class="mb-3">
-              <label for="" class="form-label">Nombre</label>
-              <input type="text"
-                class="form-control" name="nombre" id="nombre"  placeholder="Ingresa el nombre del grupo">
-              <small id="helpId" class="form-text text-muted">Help text</small>
+              <select class="form-select" aria-label="Default select example" id="select" required>
+                <option selected>Seleccione un Grupo</option>
+              </select>
             </div>
               <div class="mb-3">
                 <button type="reset" class="btn btn-danger">Limpiar</button>
@@ -51,6 +50,23 @@
       <footer>
         <!-- place footer here -->
       </footer>
+      <!-- Modal de Bootstrap -->
+<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alertModalLabel">Mensaje de Exito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Todo salio bien!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="redireccionar()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -67,12 +83,17 @@
 
     formulario.addEventListener('submit', function(e)
     {
-        alert('salvando');
-        e.preventDefault(); // para frenar y que no recargue
+        e.preventDefault();
+        mostrarAlerta();
+        var selectElement = document.getElementById('select');
+        var selectedOption = selectElement.options[selectElement.selectedIndex];
+        var selectedText = selectedOption.innerText;
         const datosEnviar = { 
           
-            nombre:document.getElementById('nombre').value,
+            nombre: selectedText
+           
         }
+        console.log(datosEnviar.nombre);
 
         fetch("https://paginas-web-cr.com/ApiPHP/apis/InsertarGrupo.php",
         {
@@ -84,7 +105,34 @@
         .then((datosrespuesta) => {
         } )
         .catch(console.log)
-    })
+    });
+    function cargarDatos(){
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php")//url de peticion de datos
+        .then(respuesta => respuesta.json())//recibe los datos en formato json
+       .then((datosrepuesta) => {
+          setData(datosrepuesta.data)//lo envio para la funcion para darle tratamiento
+       // console.log('Datos',datosrepuesta.data)//Muestra el resultado de la peticion
+       })
+       .catch(console.log)//muestra errores
+    }
+    function setData(datos){
+      datos.forEach(item => {
+      selectElement = document.getElementById('select');
+      const option = document.createElement('option');
+      option.value = item.id; 
+      option.text = item.nombre;
+      selectElement.appendChild(option);
+    });
+    }
+    function mostrarAlerta() {
+    var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+    alertModal.show();
+    
+  }
+  function redireccionar(){
+    window.location = 'listadoGrupos.html';
+  }
+    cargarDatos();
   </script>
 </body>
 

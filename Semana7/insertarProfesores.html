@@ -38,77 +38,77 @@
             <div class="mb-3">
               <label for="" class="form-label">Cedula</label>
               <input type="text"
-                class="form-control" name="cedula" id="cedula"  placeholder="Ingresa la cedula">
+                class="form-control" name="cedula" required id="cedula"  placeholder="Ingresa la cedula">
               <small id="helpId" class="form-text text-muted">Help text</small>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">correo</label>
                 <input type="text"
-                  class="form-control" name="correo" id="correo"  placeholder="Ingresa le correo">
+                  class="form-control" name="correo" required id="correo"  placeholder="Ingresa le correo">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">telefono</label>
                 <input type="text"
-                  class="form-control" name="telefono" id="telefono"  placeholder="Ingresa el telefono">
+                  class="form-control" name="telefono" required id="telefono"  placeholder="Ingresa el telefono">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">telefono Celular</label>
                 <input type="text"
-                  class="form-control" name="telefonoCelular" id="telefonoCelular"  placeholder="Ingresa el telefono Celular">
+                  class="form-control" name="telefonoCelular" required id="telefonoCelular"  placeholder="Ingresa el telefono Celular">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Fecha Nacimiento</label>
                 <input type="text"
-                  class="form-control" name="fecha" id="fecha"  placeholder="Ingresa el fecha nacimiento">
+                  class="form-control" name="fecha" required id="fecha"  placeholder="Ingresa el fecha nacimiento">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Sexo</label>
                 <input type="text"
-                  class="form-control" name="sexo" id="sexo"  placeholder="Ingresa el sexo">
+                  class="form-control" name="sexo" required id="sexo"  placeholder="Ingresa el sexo">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Direccion</label>
                 <input type="text"
-                  class="form-control" name="direccion" id="direccion"  placeholder="Ingresa la direccion">
+                  class="form-control" name="direccion" required id="direccion"  placeholder="Ingresa la direccion">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Nombre</label>
                 <input type="text"
-                  class="form-control" name="nombre" id="nombre"  placeholder="Ingresa el nombre">
+                  class="form-control" name="nombre" required id="nombre"  placeholder="Ingresa el nombre">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Apellido paterno</label>
                 <input type="text"
-                  class="form-control" name="apellidopaterno" id="apellidopaterno"  placeholder="Ingresa el apellidopaterno">
+                  class="form-control" name="apellidopaterno" required id="apellidopaterno"  placeholder="Ingresa el apellidopaterno">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Apellido materno</label>
                 <input type="text"
-                  class="form-control" name="apellidomaterno" id="apellidomaterno"  placeholder="Ingresa el apellidomaterno">
+                  class="form-control" name="apellidomaterno" required id="apellidomaterno"  placeholder="Ingresa el apellidomaterno">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Nacionalidad</label>
                 <input type="text"
-                  class="form-control" name="nacionalidad" id="nacionalidad"  placeholder="Ingresa la nacionalidad">
+                  class="form-control" name="nacionalidad" required id="nacionalidad"  placeholder="Ingresa la nacionalidad">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Id Carrera</label>
                 <input type="text"
-                  class="form-control" name="idCarreras" id="idCarreras"  placeholder="Ingresa el id de la Carrera">
+                  class="form-control" name="idCarreras" required id="idCarreras"  placeholder="Ingresa el id de la Carrera">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
-                <select class="form-select" aria-label="Default select example" id="select">
+                <select class="form-select" aria-label="Default select example" id="select" required>
                   <option selected>Seleccione Usuario</option>
                 </select>
               </div>
@@ -122,6 +122,23 @@
       <footer>
         <!-- place footer here -->
       </footer>
+      <!-- Modal de Bootstrap -->
+<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alertModalLabel">Mensaje de Exito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Todo salio bien!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="redireccionar()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -138,8 +155,11 @@
 
     formulario.addEventListener('submit', function(e)
     {
-        alert('salvando');
         e.preventDefault(); // para frenar y que no recargue
+        mostrarAlerta();
+        var selectElement = document.getElementById('select');
+        var selectedOption = selectElement.options[selectElement.selectedIndex];
+        var selectedText = selectedOption.innerText;
         const datosEnviar = { 
 
             cedula:document.getElementById('cedula').value,
@@ -154,7 +174,7 @@
             apellidomaterno: document.getElementById('apellidomaterno').value, 
             nacionalidad:document.getElementById('nacionalidad').value, 
             idCarreras:document.getElementById('idCarreras').value, 
-            usuario:document.getElementById('usuario').value
+            usuario: selectedText
         }
 
         fetch("https://paginas-web-cr.com/ApiPHP/apis/InsertarProfesores.php",
@@ -186,6 +206,14 @@
       selectElement.appendChild(option);
     });
     }
+    function mostrarAlerta() {
+    var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+    alertModal.show();
+    
+  }
+  function redireccionar(){
+    window.location = 'listadoProfesores.html';
+  }
     cargarDatos();
   </script>
 </body>

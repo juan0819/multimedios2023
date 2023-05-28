@@ -36,21 +36,21 @@
       <main>
         <form id="formulario">
             <div class="mb-3">
-              <label for="" class="form-label">Nombre</label>
+              <label for="" class="form-label" >Nombre</label>
               <input type="text"
-                class="form-control" name="nombre" id="nombre"  placeholder="Ingresa el nombre del curso">
+                class="form-control" name="nombre"  required id="nombre"  placeholder="Ingresa el nombre del curso">
               <small id="helpId" class="form-text text-muted">Help text</small>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Descripcion</label>
                 <input type="text"
-                  class="form-control" name="descripcion" id="descripcion"  placeholder="Ingresa la descripcion del curso">
+                  class="form-control" name="descripcion" required id="descripcion"  placeholder="Ingresa la descripcion del curso">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Tiempo</label>
                 <input type="text"
-                  class="form-control" name="tiempo" id="tiempo"  placeholder="Ingresa el tiempo del curso">
+                  class="form-control" name="tiempo"  required id="tiempo"  placeholder="Ingresa el tiempo del curso">
                 <small id="helpId" class="form-text text-muted">Help text</small>
               </div>
               <div class="mb-3">
@@ -63,7 +63,25 @@
       <footer>
         <!-- place footer here -->
       </footer>
+      <!-- Modal de Bootstrap -->
+<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alertModalLabel">Mensaje de Exito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Todo salio bien!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="redireccionar()">OK</button>
+      </div>
+    </div>
   </div>
+</div>
+  </div>
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -79,7 +97,7 @@
 
     formulario.addEventListener('submit', function(e)
     {
-        alert('salvando');
+        mostrarAlerta();
         e.preventDefault(); // para frenar y que no recargue
         const datosEnviar = { 
           
@@ -99,7 +117,15 @@
         .then((datosrespuesta) => {
         } )
         .catch(console.log)
-    })
+    });
+    function mostrarAlerta() {
+    var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+    alertModal.show();
+    
+  }
+  function redireccionar(){
+    window.location = 'listarcurso.html';
+  }
   </script>
 </body>
 

@@ -73,6 +73,23 @@
       <footer>
         <!-- place footer here -->
       </footer>
+      <!-- Modal de Bootstrap -->
+<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alertModalLabel">Mensaje de Exito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Todo salio bien!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="redireccionar()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Modal Body -->
 <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
 <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
@@ -88,19 +105,19 @@
             <input type="hidden" id="id" name="id">
             <label for="" class="form-label">Nombre</label>
             <input type="text"
-              class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre del curso">
+              class="form-control" name="nombre" id="nombre" required aria-describedby="helpId" placeholder="Nombre del curso">
             <small id="helpId" class="form-text text-muted">Ingresa el nombre del curso</small>
           </div>
           <div class="mb-3">
               <label for="" class="form-label">Descripcion</label>
               <input type="text"
-                class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Descripcion del curso">
+                class="form-control" name="descripcion" required id="descripcion" aria-describedby="helpId" placeholder="Descripcion del curso">
               <small id="helpId" class="form-text text-muted">Ingresa la Descripcion del curso</small>
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Tiempo</label>
               <input type="text"
-                class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="tiempo" required id="tiempo" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa el Tiempo del curso</small>
             </div>         
             <div class="mb-3">
@@ -135,7 +152,8 @@
 
     formulario.addEventListener('submit', function(e) {
         e.preventDefault();
-      alert('salvando');
+        myModal.hide();
+      mostrarAlerta();
        var id = document.getElementById('id').value;
        var nombre = document.getElementById('nombre').value;
        var descripcion = document.getElementById('descripcion').value;
@@ -155,8 +173,7 @@
             body:JSON.stringify(datosenviar)
         })//url de peticion de datos
         .then(respuesta => respuesta.json())//recibe los datos en formato json
-        .then((datosrepuesta) => {    
-            window.location = 'listarcurso.html'        
+        .then((datosrepuesta) => {           
              console.log('Datos',datosrepuesta)//Muestra el resultado de la peticion
         })
         .catch(console.log)//muestra errores
@@ -176,8 +193,6 @@
 
     function steTabla(datos){
         for (const valor of datos) {
-           // console.log('valor:',valor);
-            //[{"id":"377","nombre":"hola leo","descripcion":"sdsd","tiempo":"asasa"},
             contenidoTablaResultado.innerHTML += `
                         <tr class="table-info table-bordered border-dark" >
                             <td scope="row">${valor.id}</td>
@@ -206,7 +221,6 @@
 
     
     function eliminar(id){
-      alert('eliminar'+id);
     var datosenviar = {
             id: id
         }
@@ -218,15 +232,21 @@
         })//url de peticion de datos
         .then(respuesta => respuesta.json())//recibe los datos en formato json
         .then((datosrepuesta) => {    
-            alert(datosrepuesta.data)     
-             console.log('Datos',datosrepuesta)//Muestra el resultado de la peticion
+            mostrarAlerta();     
         })
         .catch(console.log)//muestra errores
 
 
 
   }
-
+  function mostrarAlerta() {
+    var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+    alertModal.show();
+    
+  }
+  function redireccionar(){
+    window.location = 'listarcurso.html';
+  }
     cargarDatos();
 
 

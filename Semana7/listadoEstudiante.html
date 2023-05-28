@@ -83,6 +83,23 @@
       <footer>
         <!-- place footer here -->
       </footer>
+      <!-- Modal de Bootstrap -->
+<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alertModalLabel">Mensaje de Exito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Todo salio bien!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="redireccionar()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Modal Body -->
 <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
 <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
@@ -98,73 +115,73 @@
             <input type="hidden" id="id" name="id">
             <label for="" class="form-label">Cedula</label>
             <input type="text"
-              class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Nombre del curso">
+              class="form-control" name="cedula" required id="cedula" aria-describedby="helpId" placeholder="Nombre del curso">
             <small id="helpId" class="form-text text-muted">Ingresa la cedula</small>
           </div>
           <div class="mb-3">
               <label for="" class="form-label">Correo Electronico</label>
               <input type="text"
-                class="form-control" name="correoelectronico" id="correoelectronico" aria-describedby="helpId" placeholder="Descripcion del curso">
+                class="form-control" name="correoelectronico"  required id="correoelectronico" aria-describedby="helpId" placeholder="Descripcion del curso">
               <small id="helpId" class="form-text text-muted">Ingresa el correo</small>
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Telefono</label>
               <input type="text"
-                class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="telefono" required id="telefono" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa el telefono</small>
             </div>  
             <div class="mb-3">
               <label for="" class="form-label">Telefono celular</label>
               <input type="text"
-                class="form-control" name="telefonocelular" id="telefonocelular" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="telefonocelular" required id="telefonocelular" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa el Telefono celular</small>
             </div> 
             <div class="mb-3">
               <label for="" class="form-label">Fecha nacimiento</label>
               <input type="text"
-                class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="fechanacimiento" required id="fechanacimiento" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa la fecha nacimiento</small>
             </div> 
             <div class="mb-3">
               <label for="" class="form-label">Sexo</label>
               <input type="text"
-                class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="sexo" id="sexo" required aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa el sexo</small>
             </div> 
             <div class="mb-3">
               <label for="" class="form-label">Direccion</label>
               <input type="text"
-                class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="direccion" required id="direccion" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa la direccion</small>
             </div> 
             <div class="mb-3">
               <label for="" class="form-label">Nombre</label>
               <input type="text"
-                class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="nombre"  required id="nombre" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa el nombre</small>
             </div> 
             <div class="mb-3">
               <label for="" class="form-label">Apellido paterno</label>
               <input type="text"
-                class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="apellidopaterno" required id="apellidopaterno" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa el apellido paterno</small>
             </div> 
             <div class="mb-3">
               <label for="" class="form-label">Apellido materno</label>
               <input type="text"
-                class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="apellidomaterno" required id="apellidomaterno" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa el apellido materno</small>
             </div>   
             <div class="mb-3">
               <label for="" class="form-label">Nacionalidad</label>
               <input type="text"
-                class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="nacionalidad" required id="nacionalidad" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa la nacionalidad</small>
             </div> 
             <div class="mb-3">
               <label for="" class="form-label">idCarreras</label>
               <input type="text"
-                class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="Tiempo del curso">
+                class="form-control" name="idCarreras" required id="idCarreras" aria-describedby="helpId" placeholder="Tiempo del curso">
               <small id="helpId" class="form-text text-muted">Ingresa el id carrera</small>
             </div>      
             <div class="mb-3">
@@ -199,7 +216,7 @@
 
     formulario.addEventListener('submit', function(e) {
         e.preventDefault();
-      alert('salvando');
+        mostrarAlerta();
        var id = document.getElementById('id').value; 
        var cedula = document.getElementById('cedula').value; 
        var correoelectronico = document.getElementById('correoelectronico').value; 
@@ -237,16 +254,13 @@
             body:JSON.stringify(datosenviar)
         })//url de peticion de datos
         .then(respuesta => respuesta.json())//recibe los datos en formato json
-        .then((datosrepuesta) => {    
-            window.location = 'listadoEstudiante.html'        
-             console.log('Datos',datosrepuesta)//Muestra el resultado de la peticion
+        .then((datosrepuesta) => {           
+          myModal.hide();
         })
         .catch(console.log)//muestra errores
     });
 
-    //[{"id":"377","nombre":"hola leo","descripcion":"sdsd","tiempo":"asasa"},
     function cargarDatos(){
-        //alert('Cargue datos');
         fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaEstudiantes.php")//url de peticion de datos
         .then(respuesta => respuesta.json())//recibe los datos en formato json
        .then((datosrepuesta) => {
@@ -304,7 +318,7 @@
 
     
     function eliminar(id){
-      alert('eliminar'+id);
+      mostrarAlerta();
     var datosenviar = {
             id: id
         }
@@ -315,16 +329,22 @@
             body:JSON.stringify(datosenviar)
         })//url de peticion de datos
         .then(respuesta => respuesta.json())//recibe los datos en formato json
-        .then((datosrepuesta) => {    
-            alert(datosrepuesta.data)     
-            window.location = 'listadoEstudiante.html'        
+        .then((datosrepuesta) => {        
+                    
         })
         .catch(console.log)//muestra errores
 
 
 
   }
-
+  function mostrarAlerta() {
+    var alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+    alertModal.show();
+    
+  }
+  function redireccionar(){
+    window.location = 'listadoEstudiante.html';
+  }
     cargarDatos();
 
 
