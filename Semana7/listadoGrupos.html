@@ -10,7 +10,9 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    <style>
+      @import url(estilos.css);
+  </style>
 </head>
 
 <body>
@@ -42,7 +44,7 @@
         </div>
     </nav>
       </header>
-      <main>
+      <main class="content">
         <h1>Grupos</h1>
         <div class="table-responsive">
             <table class="table table-striped
@@ -67,8 +69,22 @@
             </table>            
         </div>        
       </main>
-      <footer>
-        <!-- place footer here -->
+      <footer  class="footer bg-dark">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="text-white">&copy; 2023 JiJAUnivercity. Todos los derechos reservados.</p>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-inline text-md-right">
+                  <li class="list-inline-item"><a href="#" class="text-white">Inicio</a></li>
+                  <li class="list-inline-item"><a href="#" class="text-white">Acerca de</a></li>
+                  <li class="list-inline-item"><a href="#" class="text-white">Servicios</a></li>
+                  <li class="list-inline-item"><a href="#" class="text-white">Contacto</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
       </footer>
       <!-- Modal de Bootstrap -->
 <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
