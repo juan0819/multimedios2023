@@ -138,7 +138,7 @@
     formulario.addEventListener('submit', function(e) {
         e.preventDefault();
       myModal.hide();
-      mostrarAlerta();
+      
        var id = document.getElementById('id').value;
        var nombre = document.getElementById('nombre').value;
 
@@ -152,8 +152,8 @@
             body:JSON.stringify(datosenviar)
         })//url de peticion de datos
         .then(respuesta => respuesta.json())//recibe los datos en formato json
-        .then((datosrepuesta) => {    
-            window.location = 'listadoGrupos.html'        
+        .then((datosrepuesta) => {  
+          mostrarAlerta();        
         })
         .catch(console.log)//muestra errores
     });

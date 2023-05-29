@@ -217,7 +217,6 @@
     formulario.addEventListener('submit', function(e) {
         e.preventDefault();
       myModal.hide();
-      mostrarAlerta();
        var id = document.getElementById('id').value; 
        var cedula = document.getElementById('cedula').value; 
        var correoelectronico = document.getElementById('correoelectronico').value; 
@@ -256,7 +255,7 @@
         })//url de peticion de datos
         .then(respuesta => respuesta.json())//recibe los datos en formato json
         .then((datosrepuesta) => {    
-        
+          mostrarAlerta();
         })
         .catch(console.log)//muestra errores
     });
