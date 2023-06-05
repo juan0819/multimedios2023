@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Barra de Navegación</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </head>
+
+<body style="background-color: rgba(150, 123, 91, 0.158);">
+    
+    <img src="imagenfondo.jpg" class="img-fluid" height="100" width="1800" alt="">
+  
+        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+            <div class="container">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Candidato</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Empresa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Oferta</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                      href="#"><img src="configuracion.png" alt=""></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                      <li><a class="dropdown-item" href="#">Borrar Cuenta</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+   <div class="container-fluid">
+                  <form >
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="bg-white rounded p-3" style="margin-top: 10px;"> 
+                                    <div class="mb-3">
+                                        <label for="nombre" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required title="Este campo es obligatorio">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="apellido" class="form-label">Apellidos</label>
+                                        <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" required title="Este campo es obligatorio">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="nombre" class="form-label">Profesión</label>
+                                        <input type="text" class="form-control" id="profesion" placeholder="Ingrese su profesion">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="apellido" class="form-label">Ubicación</label>
+                                        <input type="text" class="form-control" id="ubicacion" placeholder="Ingrese su ubicacion" required title="Este campo es obligatorio">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="nombre" class="form-label">Tipo</label>
+                                        <input type="text" class="form-control" id="tipo" placeholder="Ingrese tipo" required title="Este campo es obligatorio">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="apellido" class="form-label">Descripción</label>
+                                        <input type="text" class="form-control" id="descripcion" placeholder="Ingrese su descripcion">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="apellido" class="form-label">Habilidades</label>
+                                        <input type="text" class="form-control" id="habilidades" placeholder="Ingrese su habilidades">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Ingrese su email" required title="Este campo es obligatorio">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="apellido" class="form-label">Contraseña</label>
+                                        <input type="text" class="form-control" id="contrasena" placeholder="Ingrese su contraseña" required title="Este campo es obligatorio">
+                                      </div>
+                                </div>
+                                
+                                <div class="bg-white rounded p-3" style="margin-top: 47px;"> 
+                                        <div class="d-flex align-items-center">
+                                            <h6 class="m-0">Información Académica</h6>
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="titulo" class="form-label">Título</label>
+                                            <input type="text" class="form-control" id="titulo" placeholder="Ingrese su título">
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="fechaInicio">Fecha Inicio</label>
+                                            <input type="text" class="form-control" id="fechaInicio" placeholder="Selecciona una fecha" autocomplete="off">
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="fechaFinal">Fecha Final</label>
+                                            <input type="text" class="form-control" id="fechaFinal" placeholder="Selecciona una fecha" autocomplete="off">
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="apellido" class="form-label">Institución</label>
+                                            <input type="text" class="form-control" id="institucion" placeholder="Ingrese su institucion">
+                                          </div>
+                                    </div>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div class="bg-white rounded p-3" style=" margin-left: 47px; margin-top: 10px;">
+                                    <div class="d-flex align-items-center">
+                                        <h6 class="m-0">Experiencia</h6>
+                                      </div>
+                                      <div class="">
+                                        <label for="titulo" class="form-label">Puesto</label>
+                                        <input type="text" class="form-control" id="puesto" placeholder="Ingrese su título">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="titulo" class="form-label">Experiencia</label>
+                                        <input type="text" class="form-control" id="experiencia" placeholder="Ingrese su experiencia">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="fechaInicio">Fecha Inicio</label>
+                                        <input type="text" class="form-control" id="fechaInicio1" placeholder="Selecciona una fecha" autocomplete="off">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="fechaFinal">Fecha Final</label>
+                                        <input type="text" class="form-control" id="fechaFinal1" placeholder="Selecciona una fecha" autocomplete="off">
+                                      </div>
+                                    <div class="mb-3">
+                                      <label for="titulo" class="form-label">Descripcion</label>
+                                      <input type="text" class="form-control" id="descrip" placeholder="descripcion">
+                                    </div>
+                                </div>
+                                    
+                            </div>
+                        </div>
+                    <div class="mb-3 d-inline-block">
+                        <button style="background-color: rgb(171, 142, 126); border-color: rgb(171, 142, 126);" id="guardar" class="btn btn-primary" type="submit">Registrar</button>
+                      </div>
+                </form>
+                    
+          </div>
+          
+  
+
+          <footer class="footer  text-white" style="background-color: #05304d;">
+            <div class="container d-flex justify-content-between align-items-center py-3 border-highlight">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="me-2 text-muted text-decoration-none">
+                        <i class="bi bi-cup"></i>
+                        <span>&copy; Software Recursos Humanos</span>
+                    </a>
+                </div>
+        
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex text-white">
+                    <li class="ms-3 "><a class="text-muted" href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-facebook"></i></a></li>
+                </ul>
+        
+        
+            </div>
+        
+        
+        
+        </footer>
+  
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.es.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fechaInicio').datepicker({
+                format: 'dd/mm/yyyy',
+                language: 'es',
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+    </script>
+     <script>
+      $(document).ready(function() {
+          $('#fechaFinal').datepicker({
+              format: 'dd/mm/yyyy',
+              language: 'es',
+              autoclose: true,
+              todayHighlight: true
+          });
+      });
+  </script>
+  <script>
+    $(document).ready(function() {
+        $('#fechaInicio1').datepicker({
+            format: 'dd/mm/yyyy',
+            language: 'es',
+            autoclose: true,
+            todayHighlight: true
+        });
+    });
+</script>
+ <script>
+  $(document).ready(function() {
+      $('#fechaFinal1').datepicker({
+          format: 'dd/mm/yyyy',
+          language: 'es',
+          autoclose: true,
+          todayHighlight: true
+      });
+  });
+</script>
+</body>
+</html>
