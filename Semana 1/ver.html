@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Perfil Empresa</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+  <body style="background-color: rgba(212, 193, 169, 0.555);">
+    
+    <img src="imagenfondo.jpg" class="img-fluid" height="100" width="1800" alt="">
+  
+        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+            <div class="container">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Candidato</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Empresa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Oferta</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                      href="#"><img src="configuracion.png" alt=""></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                      <li><a class="dropdown-item" href="#">Borrar Cuenta</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+  <main>
+    <div class="container">
+      <div class="row" style="margin-top: 40px;">
+          <div class="col-md-">
+              <div class="bg-white rounded p-3" style="margin-bottom: 10px;">
+                  <form>
+                      <div class="mb-3">
+                          <div class="d-flex justify-content-between">
+                              <div class="d-flex align-items-center">
+                                  <img src="imagenes/imagenperfil.jpg" class="img-fluid imagenPerfil rounded" width="20px" height="10px" loading="lazy">
+                                  <div class="ml-2">
+                                      <div class="d-block mt-2">
+                                          <label class="mt-2" style="font-size: smaller;">Nombre Completo</label>
+                                          <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" disabled/> <br>
+                                      </div>
+                                      <div class="d-block">
+                                          <label style="font-size: smaller;color: gray; border-color: rgb(247, 243, 242);">Sector</label>
+                                          <input type="text" class="form-control mb-2" name="sector" id="sector" aria-describedby="helpId" disabled/>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="d-flex align-items-center">
+                                  <i class="bi bi-pencil" id="editarIcono"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- este scrip permite editar al darle click la primera vez  se podran editar los campos y al darle click otra vez se podraguardar la informacion de los campos modificados -->
+  <script>
+      document.getElementById('editarIcono').addEventListener('click', function() {
+          var nombreInput = document.getElementById('nombre');
+          var sectorInput = document.getElementById('sector');
+          
+          if (nombreInput.disabled) {
+              nombreInput.disabled = false;
+              sectorInput.disabled = false;
+          } else {
+              nombreInput.disabled = true;
+              sectorInput.disabled = true;
+          }
+      });
+  </script>
+
+
+
+
+<div class="container">
+  <h2></h2>
+  <div class="row" style="margin-top: 10px;">
+    <div class="col-md-6">
+      <div class="bg-white rounded p-3" style="margin-bottom: 10px;">
+        <form>
+          <h4>Información Empresa</h4>
+          <div class="form-group">
+            <div class="mb-3">
+              <i class="bi bi-buildings"></i>
+              <label>Nombre Completo</label>
+              <input type="text" class="form-control" name="" id="" placeholder="Nombre completo">
+            </div>
+            <div class="mb-3">
+              <i class="bi bi-person"></i>
+              <label>Sector</label>
+              <input type="text" class="form-control" name="" id="" placeholder="Sector">
+            </div>
+            <div class="mb-3">
+              <i class="bi bi-geo-alt"></i>
+              <label>Tipo</label>
+              <input type="text" class="form-control" name="" id="" placeholder="Tipo">
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <i class="bi bi-geo-alt"></i>
+                  <label>Ubicación</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="Ubicación">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <i class="bi bi-envelope-at"></i>
+                  <label>Correo</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="Correo">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <i class="bi bi-key"></i>
+                  <label>Contraseña</label>
+                  <input type="text" class="form-control" name="" id="" placeholder="Contraseña">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bg-white rounded p-3" style="margin-bottom: 10px;">
+            <div class="form-group">
+              <div class="mb-3">
+                <label class="mb-3 text-right">Lema</label>
+                <input type="text" class="form-control" name="" id="" placeholder="Lema">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="bg-white rounded p-3" style="margin-bottom: 10px;">
+            <div class="form-group">
+              <div class="mb-3">
+                <label class="mb-3 text-right">Sitio Web</label>
+                <input type="text" class="form-control" name="" id="" placeholder="Sitio Web">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="bg-white rounded p-3" style="margin-bottom: 10px;">
+            <div class="form-group">
+              <div class="mb-3">
+                <label class="mb-3 text-right">Descripción</label>
+                <input style="height: 70px;" type="text" class="form-control" name="" id="" placeholder="Descripción">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+      <div class="mb-3 d-inline-block">
+        <a style="background-color: rgb(171, 142, 126); border-color: rgb(171, 142, 126);" name="" id="" class="btn btn-primary" href="#" role="button">Guardar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+  <footer class="footer  text-white" style="background-color: #05304d;">
+    <div class="container d-flex justify-content-between align-items-center py-3 border-highlight">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="me-2 text-muted text-decoration-none">
+                <i class="bi bi-cup"></i>
+                <span>&copy; Software Recursos Humanos</span>
+            </a>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex text-white">
+            <li class="ms-3 "><a class="text-muted" href="#"><i class="bi bi-twitter"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-instagram"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-facebook"></i></a></li>
+        </ul>
+
+
+    </div>
+
+
+
+</footer>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
