@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import ListarCurso from './componentsCurso/listarCurso';
 import MenuPrimcipal from './componentsPlantilla/Menu';
+import Dashboard from './componentsPlantilla/Dashboard';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Route, BrowserRouter as  Router } from 'react-router-dom';
@@ -12,8 +13,9 @@ function App() {
       
       <MenuPrimcipal></MenuPrimcipal>
       <Router>
-        <Route></Route>
-        <Route></Route>
+      <Route exact path='/' component={Dashboard} />
+      <Route exact path='/ListarCurso' component={ListarCurso} />
+
       </Router>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

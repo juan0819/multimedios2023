@@ -6,19 +6,20 @@ class MenuPrimcipal extends React.Component {
     state = {  }
     render() { 
         return ( 
-        <div className="container">
-            <ul class="nav justify-content-center  ">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/" aria-current="page">Home</a>
+        <div>
+            <ul className="nav nav-tabs" id="navId" role="tablist">
+                <li className="nav-item">
+                    <a href="/" class="nav-link" data-bs-toggle="tab" aria-current="page">Dashboard</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/ListarCurso">Listar Curso</a>
+                <li className="nav-item" role="presentation">
+                    <a href="/ListarCurso" class="nav-link" data-bs-toggle="tab">ListarCurso</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled link</a>
+                <li className="nav-item" role="presentation">
+                    <a href="#" className="nav-link disabled" data-bs-toggle="tab">Disabled</a>
                 </li>
-            </ul>
+            </ul> 
         </div>
+        
          );
     }
 }
